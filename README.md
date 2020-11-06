@@ -1,5 +1,15 @@
 # Agrihub
 
+Agenda
+Project Background
+Project BreakDown
+Teams
+
+# Background
+[AgriHub] is a retailer premium channel based in Africa. As an organization, we have identified the needs for creating an ecommerce application related to provide farmers an opportunity for the sales of their agricultural products and services with no barrier of time and location. It enhances agricultural production, products marketing and creates business opportunities for retailers, logistic companies, and other relevant sectors . The website is expected to be visually appealing, easy to navigate and manage.
+
+# Agrihub
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
