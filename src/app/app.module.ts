@@ -9,7 +9,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ProductDatailComponent } from './product-datail/product-datail.component';
 import {HttpClientModule} from '@angular/common/http';
 import { from } from 'rxjs';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PagenotfoundComponent } from './pagenotfound.component';
+import { StarComponent } from './star/star.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ProductListComponent,
     WelcomeComponent,
     ProductDatailComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    StarComponent
   ], 
   imports: [
     AppRoutingModule,
