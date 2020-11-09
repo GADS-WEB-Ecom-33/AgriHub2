@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { WelcomeComponent } from './welcome/welcome.component';
-import { PagenotfoundComponent } from './pagenotfound.component';
-import { AuthGuard } from './user/auth.guard';
+import { WelcomeComponent } from '../welcome/welcome.component';
+import { PagenotfoundComponent } from '../pagenotfound.component';
+import { AuthGuard } from '../user/auth.guard';
 import { SelectiveStrategy } from './selective-strategy.service';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { SelectiveStrategy } from './selective-strategy.service';
         canActivate: [AuthGuard],
         data: { preload: false },
         loadChildren: () =>
-          import('./product/product.module').then(m => m.ProductModule)
+          import('../product/product.module').then(m => m.ProductModule)
       },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', component: PagenotfoundComponent }
