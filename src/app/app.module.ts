@@ -1,34 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing/app-routing.module'; 
-import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { ProductListComponent } from './product-list/product-list.component';
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { ProductDatailComponent } from './product-datail/product-datail.component';
+import {ProductData} from './product/product-data'
 import {HttpClientModule} from '@angular/common/http';
 import { from } from 'rxjs';
 import { PagenotfoundComponent } from './pagenotfound.component';
-import { StarComponent } from './star/star.component';
-import { ProductData } from './product/product-data';
 import { ProductModule } from './product/product.module';
+import {UserModule} from './user/user.module';
+import {MessageModule} from './message/message.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
     
     AppComponent, 
-    LoginComponent,
-    ProductListComponent,
     WelcomeComponent,
-    ProductDatailComponent,
-    PagenotfoundComponent,
-    StarComponent,
-    ProductData,
-    ProductModule
+    PagenotfoundComponent
+   
     
     
   ], 
@@ -37,7 +30,15 @@ import { ProductModule } from './product/product.module';
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     BrowserModule,
     HttpClientModule,
-    HttpClientModule
+    UserModule.RouterModuleforRoot([
+      { path: 'welcome', component: WelcomeComponent },
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      { path: '**', component: PagenotfoundComponent }
+    ]),
+    ProductModule,
+    UserModule,
+    MessageModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@ import { Product } from './product';
 export class ProductData implements InMemoryDbService {
 
   createDb() {
-    const products: Product[] = [
+    const product: Product[] = [
       {
         id: 1,
         productName: 'Leaf Rake',
@@ -64,6 +64,6 @@ export class ProductData implements InMemoryDbService {
         category: 'Gaming'
       }
     ];
-    return { products };
+    return { product };
   }
 }
