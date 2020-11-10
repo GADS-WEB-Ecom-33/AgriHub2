@@ -30,7 +30,8 @@ import { RouterModule } from '@angular/router';
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     BrowserModule,
     HttpClientModule,
-    UserModule.RouterModuleforRoot([
+    UserModule,
+    RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', component: PagenotfoundComponent }
